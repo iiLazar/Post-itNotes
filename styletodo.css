@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    color: #193366;
+    font-family: "Calibri";
+}
+html {
+    background-color: #99b3e6;
+}
+body {
+    width: 88%;
+    margin: auto;
+    margin-top: 50px;
+}
+h1 {
+    background-color: 
+    #adc2eb;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.cont {
+    background-color: 
+    #adc2eb;
+    float: left;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.cont::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#left {
+    width: 29.9999%;
+    bottom: 50px;
+}
+#right, #contDel {
+    float: right;
+    width: 67.9999%;
+}
+fieldset {
+    margin-bottom: 20px;
+    border: 2px solid #c2d1f0;
+    border-radius: 7px;
+}
+legend {
+    text-decoration: underline;
+}
+textarea {
+    background-color: #c2d1f0;
+    border: 2px solid #c2d1f0;
+    border-radius: 7px;
+    margin: 5px 0;
+    padding: 10px;
+    resize: vertical;
+    width: 100%;
+    height: 150px;
+}
+#createBtn, #editBtn, #delBtn, #yes, #no {
+    width: 100%;
+    background-color: #99b3e6;
+    padding: 10px;
+    border: 2px solid #99b3e6;
+    border-radius: 7px;
+    transition: background-color, border-color 0.1s, 0.1s;
+    font-size: 1.1em;
+    margin-bottom: 3px;
+}
+#createBtn:hover {
+    background-color: #85a3e0;
+    border-color: #2952a3;
+}
+#editBtn {
+    display: none;
+    background-color: pink;
+    z-index: 1;
+}
+#delBtn {
+    width: 50%;
+}
+#delBtn:hover {
+    background-color: pink;
+    border: 2px solid hotpink;
+}
+.yesNo {
+    width: 60%;
+    margin: auto; 
+}
+#yes, #no {
+    background-color: pink;
+    border-color: white;
+    display: inline;
+    height: auto;
+    min-height: 4em;
+}
+#yes {
+    width: 33%;
+    margin-right: 2px;
+}
+#no {
+    width: 66%;
+    float: right;
+}
+#yes:hover {
+    background-color: pink;
+    border: 2px solid mediumvioletred;
+    color: mediumvioletred;
+}
+#no:hover {
+    border-color: #2952a3;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: auto;
+    background-color: #000000;
+    background-color: RGBA(0, 0, 0, 0.6);
+}
+.modalCont {
+    background-color: pink;
+    margin: 200px 200px;
+    padding: 80px;
+    position: relative;
+    height: auto;
+}
+.modalCont::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.modalTxt {
+    font-size: 1.4em;
+    text-align: center;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 2em;
+}
+.close:hover {
+    color: mediumvioletred;
+    font-weight: 800;
+    cursor: pointer;
+}
+.note {
+    position: relative;
+    background-color: #ffffcc;
+    width: 23%;
+    min-height: 80px;
+    float: left;
+    margin: 0.8%;
+    padding: 20px;
+    padding-top: 25px;
+    text-align: center;
+    border: 3px solid #ffffcc;
+    border-radius: 0 0 20px 5px;
+    overflow-wrap: break-word;
+    /*word-break: break-word;*/
+}
+.delete, .edit, .check {
+    background-color: #ffffcc;
+}
+.delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 800;
+    font-size: 1.1em;
+    border: none;
+    color: black;
+}
+.edit {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    border: 1px solid #ffffe6;
+    border-radius: 3px;
+    color: black;
+}
+
+@media only screen and (max-width: 940px) {
+    body, #left, #right, #contDel, #delBtn, #yes, #no {
+        width: 99%;
+        margin: auto;
+        margin-bottom: 3px;
+    }
+    .modalCont {
+    margin: 40px 40px;
+    padding: 40px;
+}
+@media only screen and (max-width: 490px) {
+    .note {
+        width: 99%;
+    }
+}
+/* BOJA:
+ZUTA:     #ffffcc
+PLAVA:
+95% 		 #ebf0fa
+90% 		 #d6e0f5
+85% 		 #c2d1f0
+80% 		 #adc2eb
+75% 		 #99b3e6
+70% 		 #85a3e0
+65% 		 #7094db
+60% 		 #5c85d6
+55% 		 #4775d1
+		
+50% 	     #3366cc
+		
+45% 		 #2e5cb8
+40% 		 #2952a3
+35% 		 #24478f
+30% 		 #1f3d7a
+25% 		 #193366
+20% 		 #142952
+15% 		 #0f1f3d
+10% 		 #0a1429
+5% 		 #050a14
+*/
